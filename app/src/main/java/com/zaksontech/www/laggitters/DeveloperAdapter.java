@@ -36,7 +36,7 @@ public class DeveloperAdapter extends RecyclerView.Adapter<DeveloperAdapter.View
     private List<Developers> developers;
     private Context context;
 
-    public DeveloperAdapter(List<Developers> developersLists, Context context) {
+    public DeveloperAdapter(List<Developers> developers, Context context) {
 
         this.developers = developers;
         this.context = context;
@@ -66,12 +66,12 @@ public class DeveloperAdapter extends RecyclerView.Adapter<DeveloperAdapter.View
             @Override
             public void onClick(View v) {
 
-                Developers developersList1 = developers.get(position);
+                Developers developersList = developers.get(position);
 
-                Intent skipIntent = new Intent(v.getContext(), AllProfileActivity.class);
-                skipIntent.putExtra(KEY_NAME, developersList1.getUserName());
-                skipIntent.putExtra(KEY_URL, developersList1.getHtml_url());
-                skipIntent.putExtra(KEY_IMAGE, developersList1.getAvatar_url());
+                Intent skipIntent = new Intent(v.getContext(), SingleProfileActivity.class);
+                skipIntent.putExtra(KEY_NAME, developersList.getUserName());
+                skipIntent.putExtra(KEY_URL, developersList.getHtml_url());
+                skipIntent.putExtra(KEY_IMAGE, developersList.getAvatar_url());
                 v.getContext().startActivity(skipIntent);
             }
         });
