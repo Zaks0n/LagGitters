@@ -3,20 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context="com.zaksontech.www.laggitters.AllProfileActivity">
 
     <android.support.v7.widget.CardView
         android:layout_margin="5dp"
         android:layout_width="match_parent"
-        android:layout_gravity="center"
         android:layout_height="wrap_content">
 
         <LinearLayout
             android:id="@+id/profilecontainer"
-            android:layout_margin="5dp"
             android:orientation="horizontal"
+            android:padding="14dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -27,8 +26,6 @@
 
             <TextView
                 android:id="@+id/username"
-                android:layout_margin="5dp"
-                android:gravity="center"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

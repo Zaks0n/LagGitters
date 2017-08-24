@@ -62,7 +62,7 @@ public class DeveloperAdapter extends RecyclerView.Adapter<DeveloperAdapter.View
                 .load(developersList.getAvatar_url())
                 .into(holder.avatar_url);
 
-        holder.linearLayout.setOnClickListener(new View.OnClickListener() {
+        holder.profileContainer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -88,7 +88,7 @@ public class DeveloperAdapter extends RecyclerView.Adapter<DeveloperAdapter.View
         public TextView userName;
         public ImageView avatar_url;
         public TextView html_url;
-        public LinearLayout linearLayout;
+        public LinearLayout profileContainer;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -96,7 +96,7 @@ public class DeveloperAdapter extends RecyclerView.Adapter<DeveloperAdapter.View
             userName = (TextView) itemView.findViewById(R.id.username);
             avatar_url = (ImageView) itemView.findViewById(R.id.profilePic);
             html_url = (TextView) itemView.findViewById(R.id.url);
-            linearLayout = (LinearLayout) itemView.findViewById(R.id.profilecontainer);
+            profileContainer = (LinearLayout) itemView.findViewById(R.id.profilecontainer);
         }
 
     }
