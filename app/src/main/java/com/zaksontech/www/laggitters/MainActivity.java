@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -44,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loadUrlData() {
+        /*final ProgressBar progressBar = (ProgressBar) findViewById(R.id.loading_indicator);
+        progressBar.setVisibility(View.GONE);*/
 
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Loading...");
@@ -53,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 URL_DATA, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+
 
                 progressDialog.dismiss();
 
@@ -84,8 +89,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
 
-                Toast.makeText(MainActivity.this, "Error" + error.toString(), Toast.LENGTH_SHORT).show();
-
+                Toast.makeText(MainActivity.this, " No internet connection "  , Toast.LENGTH_SHORT).show();
+                progressDialog.dismiss();
+//                error.toString()
             }
         });
 
