@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">LagGitters</string>
+    <string name="username">username</string>
+    <string name="userName">Zaks0n</string>
+    <string name="profileurl">profileURL</string>
+    <string name="share">Share</string>
 </resources>

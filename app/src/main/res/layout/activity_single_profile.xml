@@ -18,15 +18,27 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <android.support.v7.widget.CardView
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
         <ImageView
+            android:contentDescription="@string/userName"
             android:id="@+id/profileImage"
             android:src="@drawable/userimg"
             android:layout_width="match_parent"
-            android:layout_height="650px" />
+            android:layout_height="350dp" />
+
+
+
+
+
+        </android.support.v7.widget.CardView>
 
         <TextView
             android:id="@+id/profileName"
-            android:text="Zaks0n"
+            android:text="@string/userName"
             android:layout_marginTop="15dp"
             android:textAlignment="center"
             android:layout_width="match_parent"
@@ -34,7 +46,7 @@
 
         <TextView
             android:id="@+id/profileUrl"
-            android:text="profileURL"
+            android:text="@string/profileurl"
             android:textAlignment="center"
             android:layout_marginTop="15dp"
             android:layout_width="match_parent"
@@ -46,7 +58,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
-            android:text="Share"/>
+            android:text="@string/share"/>
 
     </LinearLayout>
     </android.support.v7.widget.CardView>
