@@ -95,7 +95,7 @@ public class DeveloperAdapter extends RecyclerView.Adapter<DeveloperAdapter.View
 
             userName = (TextView) itemView.findViewById(R.id.username);
             avatar_url = (ImageView) itemView.findViewById(R.id.profilePic);
-            html_url = (TextView) itemView.findViewById(R.id.url);
+            //html_url = (TextView) itemView.findViewById(R.id.url);
             profileContainer = (LinearLayout) itemView.findViewById(R.id.profilecontainer);
         }
 
